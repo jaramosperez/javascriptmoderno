@@ -9,6 +9,9 @@ module.exports = {
     optimization: {
         minimizer: [ new OptimizeCssAssetsWebpackPlugin() ]
     },
+    output:  {
+        filename: 'main.[contentHash].js'
+    },
     module: {
         rules: [
             {
@@ -54,8 +57,8 @@ module.exports = {
             filename: './index.html'
         }),
         new MiniCssExtractPlugin ({
-            //filename: '[name].[contentHash].css', // Para Producción
-            filename: '[name].css',
+            filename: '[name].[contentHash].css', // Para Producción
+            //filename: '[name].css',
             ignoreOrder: false
         }),
         new CopyPlugin ({
