@@ -12,6 +12,16 @@ class Persona {
         this.frase  = frase;
     }
 
+    //Set
+    set setComidaFavorita( comida ) {
+        this.comida = comida.toUpperCase();
+    }
+    //Get
+
+    get getComidaFavorita() {
+        return `La Comida favorita de ${ this.nombre } es ${ this.comida}`  
+    }
+
     // Métodos
     quienSoy(){
         console.log(`soy ${ this.nombre } y mi identidad es ${ this.codigo }`);
@@ -29,5 +39,5 @@ console.log( ironman );
 
 spiderman.quienSoy();
 spiderman.miFrase();
-ironman.quienSoy();
-ironman.miFrase();
+spiderman.setComidaFavorita = 'El pie de cereza de la tía May';
+console.log( spiderman.getComidaFavorita );
