@@ -1,5 +1,5 @@
 const miModulo = (() => {
-    'use strict'
+    'use strict';
 
     let deck         = [];
     const tipos      = ['C', 'D', 'H', 'S'],
@@ -26,7 +26,7 @@ const miModulo = (() => {
         }
 
         puntosHTML.forEach( elem => elem.innerText = 0 );
-        divCartasJugadores.forEach(elem => elem.innerHTML = '' );
+        divCartasJugadores.forEach( elem => elem.innerHTML = '' );
 
         btnPedir.disabled   = false;
         btnDetener.disabled = false;
@@ -141,9 +141,9 @@ const miModulo = (() => {
 
     });
 
-    // btnNuevo.addEventListener('click', () => {     
-    //     inicializarJuego();
-    // });
+    btnNuevo.addEventListener('click', () => {     
+        inicializarJuego();
+    });
 
 
     return {
